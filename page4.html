@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Lee Did this page -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@300&family=Roboto&display=swap" rel="stylesheet">
+		<title>Lee and Naglis's Project</title>
+		<script>
+			function random() {
+				window.a = Math.floor((Math.random() * 14) + 1);
+				document.getElementById("roll1").innerHTML = a;
+				
+			}
+			function random1() {
+				window.b = Math.floor((Math.random() * 14) + 1);
+				document.getElementById("roll2").innerHTML = b;
+			}
+			function random2() {
+				window.c = Math.floor((Math.random() * 14) + 1);
+				document.getElementById("roll3").innerHTML = c;
+			}
+			// These three functions above are for 3 variables that have been randomized
+			function win() {
+				
+				if (a == b && a != c){
+					document.getElementById("win").innerHTML = "You've won! You matched " +a+ " and " +b
+				}
+				else if (a == c && a != b) {
+					document.getElementById("win").innerHTML = "You've won! You matched " +a+ " and " +c
+				}
+				else if (b == c && b != a) {
+					document.getElementById("win").innerHTML = "You've won! You matched " +b+ " and " +c
+				}
+				else if (a == c && a ==b) {
+					document.getElementById("win").innerHTML = "You've won! TRIPLE!!!! You matched " +a+ " , " +b+ " and " +c
+				}
+				else {
+					document.getElementById("win").innerHTML = " "
+				}
+			}
+			// This function above is if you match anything, it will show and if you dont it will be blank.
+		</script>
+	</head>
+	<body>
+
+		<div id="container"><!-- The outer most div containing all other divs -->
+			<div id="header"><!-- The header at the top of the page -->
+				<div class="topnav"><!-- The navigation bar found at the top of the page -->
+					<div id="font3"><!-- The hrefs below are for the navigation bar to switch pages -->
+						<img src="image/logo.png" style="float:left;width:100px;height:47.5px;">
+						<a  href="index.html">Home</a>
+						<a href="page1.html">Gallery</a>
+						<a href="page2.html">Contacts</a>
+						<a href="page3.html">About</a>
+						<a class="active" href="page4.html">Game</a>
+					</div>
+				</div>
+			</div>
+			<div id="imagebanner"><!-- This div is for the burger banner seen on every page -->
+				<img src="image/bannergame.png" style="float:left;width:100%;height:auto;max-height:500px;">
+			</div>
+			<div id="content"><!-- This div is for content under the header and above the footer while being within the container -->
+				<div id="main"><!-- This div is for positioning certain content within the content div -->
+					<div id="game"><!-- These divs below are for the content on the page split up into several divs for positioning-->
+					<!-- These buttons will call all the functions using the play button and refresh the page using the other-->
+						<button onclick="random();random1();random2(); win()">Play</button>
+						<button onClick="window.location.reload();">Refresh game</button>
+					</div>
+					<!-- This div below is for the random numbers to be shown-->
+					<div id="output">
+						<p id="roll1"></p>
+						<p id="roll2"></p>
+						<p id="roll3"></p>
+					
+					<!-- This div below is for the win message-->
+					<div id="dusted">
+						<p id="win"></p>
+					</div>
+					</div>
+
+				</div>
+				
+			</div>
+			<div id="footer"><!-- This div is for the footer at the bottom of the page -->
+				Copyright &copy; 2020 Lee & Naglis
+				<!-- These links are for the social medias seen at the bottom -->
+				<a href="https://www.instagram.com/gbkireland/">
+				<img src="image/insta.png" style="float:left;width:25px;height:25px;margin-right:5px;">
+				</a>
+				<a href="https://www.facebook.com/GBKIreland/?fref=ts">
+				<img src="image/facebook.png" style="float:left;width:25px;height:25px;margin-right:5px;">
+				</a>
+				<a href="https://twitter.com/GBKIreland">
+				<img src="image/twitter.png" style="float:left;width:25px;height:25px;margin-right:5px;">
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

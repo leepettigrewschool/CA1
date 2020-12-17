@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- Lee Did this page -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@300&family=Roboto&display=swap" rel="stylesheet">
+		<title>Lee and Naglis's Project</title>
+		<script>
+		function greet(){
+
+			window.input = document.getElementById("email").value;
+			window.input1 = document.getElementById("phone").value;
+			window.input2 = document.getElementById("name").value;
+			window.input3 = document.getElementById("message").value;
+		} // This function is used to take the input and put them into global variables.
+			// The Global variables are needed to allow two different functions to communicate
+
+
+			
+		function wrong(){
+			if (input.length < 1){
+				document.getElementById("userinfo").innerHTML = "You havent entered an email";
+			}
+			
+			else if (input.indexOf("@") == -1 || input.indexOf(".com") == -1 ){
+				document.getElementById("userinfo").innerHTML = "Please use a valid email address";
+			}
+			
+			else if (input1.length < 7){
+				document.getElementById("userinfo").innerHTML = "Please enter a valid phone number";
+			}
+			
+			else if (input2.length < 1){
+				document.getElementById("userinfo").innerHTML = "please enter a valid name";
+			}
+			
+			else if (input3.length < 1){
+				document.getElementById("userinfo").innerHTML = "Please write a message to submit";
+			}
+			
+			else {
+				document.getElementById("userinfo").innerHTML = "Thank you for submitting a message, Have a nice day!";
+			}
+		} // This function is for if the user does something wrong, and if he doesnt the else statement will be called giving 
+		</script>
+	</head>
+	<body>
+
+		<div id="container"><!-- The outer most div containing all other divs -->
+			<div id="header"><!-- The header at the top of the page -->
+				<div class="topnav"><!-- The navigation bar found at the top of the page -->
+					<div id="font3"><!-- The hrefs below are for the navigation bar to switch pages -->
+						<img src="image/logo.png" style="float:left;width:100px;height:47.5px;">
+						<a href="index.html">Home</a>
+						<a href="page1.html">Gallery</a>
+						<a class="active" href="page2.html">Contacts</a>
+						<a href="page3.html">About</a>
+						<a href="page4.html">Game</a>
+					</div>
+				</div>
+			</div>
+			<div id="imagebanner"><!-- This div is for the burger banner seen on every page -->
+				<img src="image/bannercon.png" style="float:left;width:100%;height:auto;max-height:500px;">
+			</div>
+			<div id="content"><!-- This div is for content under the header and above the footer while being within the container -->
+				<div id="main"><!-- This div is for positioning certain content within the content div -->
+					<div id="contactleft">
+						<h2 id="font2">Address</h2>
+						<p id="font">Temple Bar Square, Unit 2, Dublin, D02 KA02</p>
+						<h2 id="font2"> Phone Number & opening times </h2>
+						<p id="font">(01) 670 8343 <br><br>
+							Currently Closed</p>
+						<h2 id="font2"> Form </h2>
+						<form><!-- This is to take the input for JS -->
+						   Email: <input type="text" id="email" style="margin-left:22px;">
+						   <br>
+						   Phone: <input type="text" id="phone" style="margin-left:20px;">
+						   <br>
+						   Name: <input type="text" id="name" style="margin-left:22px;">
+						   <br>
+						   Message: <input type="text" id="message" style="margin-left:4px;">
+						   
+						   <p id="userinfo"></p>
+						   <br/>
+							<input type ="button" value="Submit" onclick="greet(); wrong();"><!-- This will submit what the user has entered and display the correct response -->
+						</form>
+					</div>
+					
+					<div id="contactright col-3 col-s-3"style="float:right;margin-top:15px;margin-right:15px;">
+					<!-- This is the embedded google maps location -->
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19055.032970401597!2d-6.263325747534724!3d53.345419990608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e832c406467%3A0x9682eea2bb7aedbf!2sGourmet%20Burger%20Kitchen%20(GBK)!5e0!3m2!1sen!2sie!4v1607345977117!5m2!1sen!2sie" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					</div>
+					<div id="contactrightdown"> <!-- These are the enlarged social links -->
+						<a href="https://www.instagram.com/gbkireland/">
+						<img src="image/insta.png" style="float:right;width:100px;height:100px;margin-right:10px;margin-top:10px;">
+						</a>
+						<a href="https://www.facebook.com/GBKIreland/?fref=ts">
+						<img src="image/facebook.png" style="float:right;width:100px;height:100px;margin-right:10px;margin-top:10px;">
+						</a>
+						<a href="https://twitter.com/GBKIreland">
+						<img src="image/twitter.png" style="float:right;width:100px;height:100px;margin-right:10px;margin-top:10px;">
+						</a>
+					</div>
+
+				</div>
+				
+			</div>
+			<div id="footer"><!-- This div is for the footer at the bottom of the page -->
+				Copyright &copy; 2020 Lee & Naglis
+				<!-- These links are for the social medias seen at the bottom -->
+				<a href="https://www.instagram.com/gbkireland/">
+				<img src="image/insta.png" style="float:left;width:25px;height:25px;margin-right:5px;">
+				</a>
+				<a href="https://www.facebook.com/GBKIreland/?fref=ts">
+				<img src="image/facebook.png" style="float:left;width:25px;height:25px;margin-right:5px;">
+				</a>
+				<a href="https://twitter.com/GBKIreland">
+				<img src="image/twitter.png" style="float:left;width:25px;height:25px;margin-right:5px;">
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

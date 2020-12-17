@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Lee Did this page -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@300&family=Roboto&display=swap" rel="stylesheet">
+		<title>Lee and Naglis's Project</title>
+		
+		<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+				<script type="text/javascript">
+					$(document).ready(function(){
+						$('.thumb a').click(function(e){
+							e.preventDefault();
+								$('.imgBox img').attr("src", $(this).attr("href"));
+						
+						})
+					})
+					// This JS is for the gallery and used the thumb and imgbox divs below. 
+				</script>
+	</head>
+	<body>
+
+		<div id="container"> <!-- The outer most div containing all other divs -->
+			<div id="header"> <!-- The header at the top of the page -->
+				<div class="topnav"> <!-- The navigation bar found at the top of the page -->
+					<div id="font3"> <!-- The hrefs below are for the navigation bar to switch pages -->
+						<img src="image/logo.png" style="float:left;width:100px;height:47.5px;">
+						<a href="index.html">Home</a>
+						<a class="active" href="page1.html">Gallery</a>
+						<a href="page2.html">Contacts</a>
+						<a href="page3.html">About</a>
+						<a href="page4.html">Game</a>
+					</div>
+				</div>
+			</div>
+			<div id="imagebanner"> <!-- This div is for the burger banner seen on every page -->
+				<img src="image/bannergal.png" style="float:left;width:100%;height:auto;max-height:500px;">
+			</div>
+			<div id="content">  <!-- This div is for content under the header and above the footer while being within the container -->
+				<div id="main"> <!-- This div is for positioning certain content within the content div -->
+				
+				
+				
+				<div class="imgBox "><img src="image/burger.jpg"></div> <!-- This div is for the big image seen on the gallery -->
+				
+				<!-- Burger.jpg ref https://bit.ly/3gYKqSd
+					 Burger2.png ref https://bit.ly/2IZASdp
+					 Burger3.png ref https://bit.ly/2IZASdp
+					 Burger4.png ref https://bit.ly/2IZASdp
+					 Burger5.png ref https://bit.ly/2IZASdp
+				
+				-->
+					 
+				<ul class="thumb "><!-- This div is for the smaller images underneath the large one in the gallery -->
+					<li><a href="image/burger.jpg" target="imgBox"><img src="image/burger.jpg" ></a></li>
+					
+					<li><a href="image/burger4.png" target="imgBox"><img src="image/burger4.png"></a></li>
+					
+					<li><a href="image/burger3.png" target="imgBox"><img src="image/burger3.png"></a></li>
+					
+					<li><a href="image/burger2.png" target="imgBox"><img src="image/burger2.png"></a></li>
+					
+					<li><a href="image/burger5.png" target="imgBox"><img src="image/burger5.png"></a></li>
+				</ul>
+
+				</div>
+				
+			</div>
+			<div id="footer"> <!-- This div is for the footer at the bottom of the page -->
+				Copyright &copy; 2020 Lee & Naglis
+				<!-- These links are for the social medias seen at the bottom -->
+				<a href="https://www.instagram.com/gbkireland/">
+				<img src="image/insta.png" style="float:left;width:25px;height:25px;margin-right:5px;">
+				</a>
+				<a href="https://www.facebook.com/GBKIreland/?fref=ts">
+				<img src="image/facebook.png" style="float:left;width:25px;height:25px;margin-right:5px;">
+				</a>
+				<a href="https://twitter.com/GBKIreland">
+				<img src="image/twitter.png" style="float:left;width:25px;height:25px;margin-right:5px;">
+				</a>
+			</div>
+		</div>
+	</body>
+</html>
